@@ -19,22 +19,25 @@ int main(int argc, char const *argv[])
 
     while (true)
     {
-        auto can = Canvas(300,100);  
+        auto can = Canvas(300,80);  
     
     //Símbolo
-    can.DrawPointLine(150,10,150,40);  
+    can.DrawPointLine(150,10,150,40); 
     can.DrawPointLine(130,25,170,25);  
     can.DrawPointLine(150,10,170,10); 
     can.DrawPointLine(130,25,130,10); 
     can.DrawPointLine(150,40,130,40); 
     can.DrawPointLine(170,25,170,40);
 
-    can.DrawPointCircle(150,25,25);
-    can.DrawPointLine(130,10,170,40);
+    //Censura
+    can.DrawBlockCircle(150,25,25);
+    can.DrawBlockLine(130,9,170,39);
+    
     
     //Cara
     can.DrawPointEllipse(20,25,2.5,y2);
     can.DrawPointEllipse(40,25,2.5,y2);
+    
     can.DrawPointLine(30,30,35,35);
     can.DrawPointLine(35,35,30,35);
     can.DrawPointEllipse(30,45,10,y);
